@@ -73,6 +73,18 @@ jobs:
       run: |
         echo "TWINE_USERNAME length: ${#TWINE_USERNAME}"
         echo "TWINE_PASSWORD length: ${#TWINE_PASSWORD}"
-        TAG=`awk '/version/{print $NF}' pyproject.toml | sed 's/"//g'`
-        # poetry config http-basic.pypi "$TWINE_USERNAME" "$TWINE_PASSWORD"
-        # poetry publish --username "$TWINE_USERNAME" --password "$TWINE_PASSWORD"
+        TAG=`awk '/^version = / {print $NF}' pyproject.toml | tr -d '"'`
+        echo "TAG: $TAG"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git config --global user.name "$GITHUB_ACTOR"        
+        git tag $TAG
+        git push origin $TAG
+        # Check if the git push was successful
+        if [ $? -eq 0 ]; then
+            echo "Git tag $TAG pushed successfully. Publishing to PyPI."
+            poetry config http-basic.pypi "$TWINE_USERNAME" "$TWINE_PASSWORD"
+            poetry publish --username "$TWINE_USERNAME" --password "$TWINE_PASSWORD"
+        else
+            echo "Failed to push Git tag $TAG. Aborting PyPI publish."
+            exit 1
+        fi
