@@ -1,6 +1,7 @@
 name: Placeholder Workflow
 
-on: []
+on: 
+  workflow_dispatch:
 
 jobs:
   placeholder:
