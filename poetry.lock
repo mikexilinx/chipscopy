@@ -2391,11 +2391,6 @@ files = [
 loguru = ">=0.7,<0.8"
 pexpect = ">=4.8,<5.0"
 
-[package.source]
-type = "legacy"
-url = "https://artifactory.xilinx.com/artifactory/api/pypi/pypi/simple"
-reference = "artifactory"
-
 [[package]]
 name = "pycparser"
 version = "2.21"
@@ -2515,11 +2510,6 @@ files = [
 
 [package.extras]
 cython = ["Cython (>=0.29.26,<0.30.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://artifactory.xilinx.com/artifactory/api/pypi/pypi/simple"
-reference = "artifactory"
 
 [[package]]
 name = "pytest"
@@ -3599,4 +3589,4 @@ pytcf = ["pytcf"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "21e9bb30ea0d51ec47406b2ded45d9c8ce59f953d7532d9185bbf632daca4fb3"
+content-hash = "f1f85a73af83e8d8bf3b2b50aafebed9e9083d342831e95d4eb2280c2c0cbdc5"
