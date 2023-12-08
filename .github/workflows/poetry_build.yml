@@ -2,7 +2,7 @@ name: Poetry Build
 
 on:
   workflow_dispatch:
-  
+
   repository_dispatch:
     types: [manual-trigger]
     # TO TEST WORKFLOW MANUALLY: 
