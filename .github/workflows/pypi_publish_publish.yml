@@ -73,5 +73,6 @@ jobs:
       run: |
         echo "TWINE_USERNAME length: ${#TWINE_USERNAME}"
         echo "TWINE_PASSWORD length: ${#TWINE_PASSWORD}"
-        poetry config http-basic.testpypi "$TWINE_USERNAME" "$TWINE_PASSWORD"
-        poetry publish -r testpypi --username "$TWINE_USERNAME" --password "$TWINE_PASSWORD"
+        TAG=`awk '/version/{print $NF}' pyproject.toml | sed 's/"//g'`
+        # poetry config http-basic.pypi "$TWINE_USERNAME" "$TWINE_PASSWORD"
+        # poetry publish --username "$TWINE_USERNAME" --password "$TWINE_PASSWORD"
