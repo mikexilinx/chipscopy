@@ -85,12 +85,6 @@ core-addons = ["plotly", "kaleido", "matplotlib", "PyQt5", "pandas", "ipympl"]
 jupyter = ["notebook", "ipywidgets"]
 pytcf = ["pytcf"]
 
-[[tool.poetry.source]]
-name = "artifactory"
-url = "https://artifactory.xilinx.com/artifactory/api/pypi/pypi/simple"
-default = false
-secondary = true
-
 [tool.pytest.ini_options]
 addopts = "--strict-markers --verbose"
 markers = [
