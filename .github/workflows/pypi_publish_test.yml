@@ -69,8 +69,7 @@ jobs:
     - name: Publish package (Test)
       env:
         PYPI_USERNAME: ${{ secrets.TEST_PYPI_USERNAME }}
-#        PYPI_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}
-        PYPI_PASSWORD: "blah blah blah"
+        PYPI_PASSWORD: ${{ secrets.TEST_PYPI_PASSWORD }}
       run: |
         poetry config repositories.testpypi https://test.pypi.org/legacy/
         poetry publish -r testpypi --username "$PYPI_USERNAME" --password "$PYPI_PASSWORD"
