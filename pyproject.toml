@@ -89,7 +89,7 @@ pytcf = ["pytcf"]
 name = "artifactory"
 url = "https://artifactory.xilinx.com/artifactory/api/pypi/pypi/simple"
 default = false
-secondary = false
+secondary = true
 
 [tool.pytest.ini_options]
 addopts = "--strict-markers --verbose"
