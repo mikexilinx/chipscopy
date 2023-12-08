@@ -50,7 +50,6 @@ ipympl = { version = "^0.9.3", optional = true }
 pytest = "^7.4"
 coverage = "^7.3"
 pytest-mock = "^3.11"
-pyboardbarn = "^5.0.3"
 colorama = "^0.4"
 
 [tool.poetry.group.docs.dependencies]

@@ -2133,7 +2133,7 @@ files = [
 name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
-optional = false
+optional = true
 python-versions = "*"
 files = [
     {file = "pexpect-4.8.0-py2.py3-none-any.whl", hash = "sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937"},
@@ -2355,7 +2355,7 @@ test = ["enum34", "ipaddress", "mock", "pywin32", "wmi"]
 name = "ptyprocess"
 version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
-optional = false
+optional = true
 python-versions = "*"
 files = [
     {file = "ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35"},
@@ -2375,21 +2375,6 @@ files = [
 
 [package.extras]
 tests = ["pytest"]
-
-[[package]]
-name = "pyboardbarn"
-version = "5.0.3"
-description = "Simple python package to acess and leverage the boardfarm from python scripts"
-optional = false
-python-versions = ">=3.8,<4.0"
-files = [
-    {file = "pyboardbarn-5.0.3-py3-none-any.whl", hash = "sha256:6b82d2d6568f33a41faa9d49bae5353a057cfa8f9350ee93c4671e348f2f116f"},
-    {file = "pyboardbarn-5.0.3.tar.gz", hash = "sha256:6b23830de2095281c862397f355d155d5945d66032027bcf57bbb521dca70e04"},
-]
-
-[package.dependencies]
-loguru = ">=0.7,<0.8"
-pexpect = ">=4.8,<5.0"
 
 [[package]]
 name = "pycparser"
@@ -3589,4 +3574,4 @@ pytcf = ["pytcf"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.3"
-content-hash = "f1f85a73af83e8d8bf3b2b50aafebed9e9083d342831e95d4eb2280c2c0cbdc5"
+content-hash = "d1688c7b193eaaef4baede1ad035da943b157a827153346aa7b86a9ebc8cdfc6"
